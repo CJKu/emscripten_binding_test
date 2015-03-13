@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+<script src="asm.js"></script>
+<script>
+  console.log('lerp result: ' + Module.lerp(1, 2, 0.5));
+
+  var instance = new Module.MyClass(10, "hello");
+  instance.incrementX();
+  instance.x; // 12
+  instance.x = 20; // 20
+  var vector_int = instance.return_vector_int();
+  console.log(vector_int.size());
+  console.log(Module.MyClass.getStringFromInstance(instance));
+  instance.delete();
+
+  console.log("== TestValueArray begin ==");
+  var t = new Module.TestValueArray();
+  t.setSize([10, 50, "abc"]);
+  var size = t.getSize();
+  console.log("size.width = " + size[0] + ". size.height = " + size[1]);
+
+</script>
+</html>
