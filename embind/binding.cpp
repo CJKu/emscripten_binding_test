@@ -19,11 +19,6 @@ EMSCRIPTEN_BINDINGS(my_class_example) {
     .class_function("getStringFromInstance", &MyClass::getStringFromInstance)
     ;
 
-  value_array<Size>("Size")
-    .element(&Size::width)
-    .element(&Size::height)
-    .element(&Size::name)
-    ;
   class_<TestValueArray>("TestValueArray")
     .constructor<>()
     .function("setSize", &TestValueArray::SetSize)

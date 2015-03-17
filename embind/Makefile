@@ -1,6 +1,6 @@
 CPPFLAGS = -I ~/repository/emscripten/system/include
 HEADERS = class.h quick_example.h
-CPPS = quick_example.cpp binding.cpp function.cpp pass_vector.cpp
+CPPS = pass_pointer.cpp pass_ref.cpp pass_vector.cpp
 OUTPUT := asm.js
 
 build: $(OUTPUT)

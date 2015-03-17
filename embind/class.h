@@ -33,12 +33,6 @@ private:
   std::string y;
 };
 
-struct Size {
-  int width;
-  int height;
-  std::string name;
-};
-
 class TestValueArray {
 public:
   TestValueArray() {

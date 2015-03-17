@@ -15,6 +15,6 @@ void float_multiply_array(int32_t factor, uintptr_t buffer, int length) {
   }
 }
 
-EMSCRIPTEN_BINDINGS(my_functionis) {
-  function("float_multiply_array", &float_multiply_array, allow_raw_pointers());
+EMSCRIPTEN_BINDINGS(pointer_binding) {
+  function("float_multiply_array", &float_multiply_array);
 }
