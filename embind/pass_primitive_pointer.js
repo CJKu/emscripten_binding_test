@@ -22,10 +22,10 @@ QUnit.test("test_pass_buffer", function(assert) {
 
   // Pointer_make
   // https://groups.google.com/forum/#!topic/emscripten-discuss/JDaNHIRQ_G4
-  var jsList = [5, 6, 7, 8];
-  var cHeapPtr = Module.Pointer_make(jsList, 0, ALLOC_NORMAL, "i32");
-  var viewer = new Int32Array(Module.HEAPU8.buffer, cHeapPtr, jsList.length);
-  assert.equal(viewer[0], 5, "viewer[0] = 5");
+  //var jsList = [5, 6, 7, 8];
+  //var cHeapPtr = Module.Pointer_make(jsList, 0, ALLOC_NORMAL, "i32");
+  //var viewer = new Int32Array(Module.HEAPU8.buffer, cHeapPtr, jsList.length);
+  //assert.equal(viewer[0], 5, "viewer[0] = 5");
 
   //Module._free(cHeapPtr);
 });
