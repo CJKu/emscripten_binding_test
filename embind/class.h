@@ -33,6 +33,7 @@ private:
   std::string y;
 };
 
+/*
 class TestValueArray {
 public:
   TestValueArray() {
@@ -50,5 +51,5 @@ public:
 
 private:
   Size mSize;
-};
+};*/
 #endif

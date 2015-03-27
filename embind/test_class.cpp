@@ -7,6 +7,8 @@ public:
   int foo(int, int) { return 2; }
   // Can not bind a function with "..." parameter
   int foo(int, ...) { return 3; }
+
+  template<typename _T> _T moo() { return _T(); }
 };
 
 class GetterWrapperTest {
@@ -28,6 +30,7 @@ EMSCRIPTEN_BINDINGS(class_binding) {
     // Export foo overloading member functions.
     .function("foo", (int (OverloadingTest::*)(int)) &OverloadingTest::foo)
     .function("foo", (int (OverloadingTest::*)(int,int)) &OverloadingTest::foo)
+   // .function("moo", (template )
     ;
   class_<GetterWrapperTest>("GetterWrapperTest")
     .constructor<>()
