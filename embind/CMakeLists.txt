@@ -25,7 +25,7 @@ add_custom_command (
   TARGET embind_test POST_BUILD
   COMMAND mkdir -p bin
   COMMAND cp ${test_files} ${CMAKE_RUNTIME_OUTPUT_DIRECTORY}
-  COMMAND emcc ${CMAKE_LIBRARY_OUTPUT_DIRECTORY}/libembind_test.so -O3 --bind --llvm-lto 1 --closure 1 -s PRECISE_F32=1 -s FORCE_ALIGNED_MEMORY=1 -s TOTAL_MEMORY=306777216 -o ${CMAKE_RUNTIME_OUTPUT_DIRECTORY}/asm.js
+  COMMAND emcc ${CMAKE_LIBRARY_OUTPUT_DIRECTORY}/libembind_test.so --bind --llvm-lto 1 --closure 1 -s PRECISE_F32=1 -s FORCE_ALIGNED_MEMORY=1 -s TOTAL_MEMORY=306777216 -o ${CMAKE_RUNTIME_OUTPUT_DIRECTORY}/asm.js
 )
 
 #add_custom_target (

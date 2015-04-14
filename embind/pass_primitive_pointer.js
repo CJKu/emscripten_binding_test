@@ -1,12 +1,14 @@
 
 QUnit.test("test_pass_buffer", function(assert) {
-  // An example which is work. 
+  // Cool examples.
   // https://groups.google.com/forum/#!topic/emscripten-discuss/oeEg6WrZ7rg
   // Good artical, but sample code is not work
   // http://kapadia.github.io/emscripten/2013/09/13/emscripten-pointers-and-pointers.html
   var data = new Int32Array([1,2,3,4]);
   var dataPtr = Module._malloc(data.length * 4);
-  var heap = new Int32Array(Module.HEAP32.buffer, dataPtr, data.length * 4);
+  var heap = new Int32Array(Module.HEAP32.buffer, dataPtr, data.length);
+  // Alternatively, you may use subarray.
+  // var heap = Module.HEAP32.subarray(dataPtr >> 2, data.length);
   heap.set(new Int32Array(data.buffer));
 
   Module.float_multiply_array(2, heap.byteOffset, data.length);
